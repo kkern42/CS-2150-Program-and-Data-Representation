@@ -1,0 +1,13 @@
+//User: kjk9cd
+//Date: 9/3/2019
+//File: pair.cpp
+//Lab 10: pre-lab
+
+#include "pair.h"
+#include <iostream>
+using namespace std;
+
+pairs::pairs(char letter, int frequency){
+  let = letter;
+  freq = frequency;
+}

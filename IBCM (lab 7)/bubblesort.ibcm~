@@ -1,0 +1,34 @@
+C015 000        jmp meed to update this 
+0003 001  max
+0000 002  temp
+0002 003  a[0]
+0004 004  a[1]
+0007 005  a[2]
+0001 006  a[3]
+0001 007  one
+0000 008  load it
+0000 009  i
+0000 00A  j
+0000 00B
+0000 00C
+0000 00D
+0000 00E
+3009 00F        load i to add onw i += 1 increment 
+5007 010
+4009 011
+C001 012        JUMP TO BEGINING OF I FOR LOOP needs adress udpate 
+300A 012        laod j j-= 1 decrement 
+6007 013
+400A 014
+C001 015        jump to nrginning of j for loop needs adress update 
+3001 015        load max
+6007 016        sub by one
+400A 017        store max-1 in j
+3001 018 loop   load max
+6009 019        max - i
+D029 01A        jump to very end of loop if it is equal to
+300A 01B        load j  j > i
+6009 01C        sub i fro j
+E029 01B        jump to the end
+D029 01C        jump to the end i cant be grater o equal to j 
+

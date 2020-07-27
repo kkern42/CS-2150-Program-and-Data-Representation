@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* typedef comes before struct */
+typedef struct list_item {
+  struct list_item *prev, *next;
+  int value;
+} list_item_t; 
+
+struct list {
+  list_item_t *head, *tail;
+  unsigned length;
+  int (*compare)(const void *key, const void *with);
+  void (*datum_delete)(void *);
+};
+
+int main() {
+  struct  list * my_list;
+  my_list  = (struct list      *) malloc(sizeof(struct list_item *));
+  int items;
+  int count = 0;
+  int* p;
+  printf("# of items: ");
+  scanf("%d", &items);
+  while(count < items){
+    int newItem;
+    printf("Enter a number: ");
+    scanf("%d", &newItem);
+    list_item_t * newNode;
+    newNode = (struct list_item *) malloc(sizeof(struct list_item *));
+    newNode->value = newItem;
+    newNode->prev = my_list.head;
+    
+    count = count + 1;
+  }
+  
+
+  /* dynamically allocate an array of ints */
+  p = (int *) malloc(sizeof (int) * 5);
+  p[1] = 10;
+  printf ("%d\n", p[1]);
+
+  /* free up that array */
+  free(p);
+
+  /* calling free(p) again is an error, and will crash the program */
+}

@@ -1,0 +1,18 @@
+//User: kjk9cd
+//Date: 9/3/2019
+//File: LifeCycle.h
+//Lab 1: In-lab
+
+#ifndef PAIR_H
+#define PAIR_H
+#include <iostream>
+using namespace std;
+
+// ---------------------------------------------------  class definition
+class pairs {
+public:
+  pairs(char letter, int frequency);      // default constructor
+  int freq;
+  char let;
+};
+#endif

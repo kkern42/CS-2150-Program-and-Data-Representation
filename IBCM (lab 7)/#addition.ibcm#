@@ -1,0 +1,35 @@
+xC007 000       jmp     start  skip variables(kevin kern, addition.ibcm, prelab6)
+0000 001  i    dw      0      int i
+0000 002  j    dw      0      int j
+0000 003  k    dw      0      int k
+0000 004  sum  dw      0      int sum
+0000 005  zero dw      0      int zero
+0000 006
+1000 007 loop  read           reads in i
+4001 008       store   i      stores i
+1000 009       read           reads in j
+4002 00A       store   j      stores k
+1000 00B       read           reads in k
+4003 00C       store   k      stores k
+3005 00D       load    zero   to store in sum
+4004 00E       store   sum    store zero in sum
+3004 00F       load    sum    sum += i
+5001 010       add     i
+4004 011       store   sum
+3004 012       load    sum    sum += j
+5002 013       add     j
+4004 014       store   sum
+3004 015       load    sum    sum += k
+5003 016       add     k 
+4004 017       store   sum
+3004 018       load    sum    print sum
+1800 019       print
+D01C 01A       jumpe          jump to print i j k if sum zero 
+C007 01B       jump           jump to beginning 
+3001 01C exit  load    i      print i
+1800 01D       print   i
+3002 01E       load    j      print j
+1800 01F       print   j
+3003 020       load    k      print k
+1800 021       print   k
+0000 022       halt 

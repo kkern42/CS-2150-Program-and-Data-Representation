@@ -1,0 +1,60 @@
+/*
+Kevin Kern (kjk9cd)
+postlab 9
+11/20/2019
+linkedlist.c
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+/* typedef comes before struct */
+typedef struct list_item {
+  struct list_item *prev;
+  int value;
+} list_item_t; 
+
+struct list {
+  list_item_t *head, *tail;
+};
+
+int main() {
+  struct  list * my_list;
+  my_list  = (struct list *) malloc(sizeof(struct list *));
+  int items;
+  int count = 0;
+  int* p;
+  printf("Enter length of list: ");
+  scanf("%d", &items);
+  while(count < items){
+    int newItem;
+    printf("Enter a number: ");
+    scanf("%d", &newItem);
+    list_item_t * newNode;
+    newNode = (struct list_item *) malloc(sizeof(struct list_item *));
+    newNode->value = newItem;
+    if(count == 0){
+      my_list->tail = newNode;
+    }
+    else{
+      newNode->prev = my_list->tail;
+      my_list->tail = newNode;
+    }
+    count = count + 1;
+  }
+
+  list_item_t * printer = my_list->tail;
+  int length;
+  for(length = 0; length < items; length++){
+    printf("%d \n", printer->value);
+    printer = printer->prev;
+  }
+  printer = my_list->tail;
+  for(length = 0; length < items; length++){
+    printer = printer->prev;
+    free(my_list->tail);
+    my_list->tail = printer;
+  }
+  
+  free(my_list);
+
+}

@@ -1,0 +1,31 @@
+C00D 000
+0001 001
+0002 002
+0003 003
+0004 004
+0001 005 index dw  1  int start = 1
+0004 006 size  dw  4  int size = 4
+0000 007 max   dw  0  int max = 0
+3000 008 loadit dw  5000
+0001 009 one
+0000 00A
+0000 00B
+0000 00C
+3006 00D load size to sub tract by index to see if they are eqaul, so havetosuub
+6005 00E size - index
+D0__ 00F jump down if index is equal to size
+3008 010 load adit
+5005 011 add index
+4016 012 store loadit
+3005 013 load index to add one
+5009 014 add one to index
+4005 015 store index that has been added one
+0000 016 doit will load whats
+6007 017 sub track array value by max
+E00D 018 jumpl value not bigger thenmax
+3016 019 load value
+4007 01A store new value in max
+C00D 01B jump to beginning of loop
+3007 01C load max
+1800 01D print max
+0000 01E halt

@@ -1,0 +1,17 @@
+//User: kjk9cd (Kevin Kern)
+//File: List.cpp
+//Date: 9/17/2019
+//Lab3: Post-Lab
+
+#include "myCLass.h"
+//#include "ListNode.cpp"
+#include <iostream>
+// next line needed because NULL is part of std namespace
+ using namespace std;
+
+
+//Default Constructor
+myClass::myClass(){
+ 
+}
+

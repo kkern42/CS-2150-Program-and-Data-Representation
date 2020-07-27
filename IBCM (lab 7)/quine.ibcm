@@ -1,0 +1,22 @@
+C007 000 jump    dw             jump to load(kevin kern, quine.ibcm, postlab7)
+0001 001 one     dw     1        
+3000 002 loadit  dw     3000    loadit = 3000
+0000 003 index   dw     0       int index = 0
+0015 004 max     dw     13      int max = 13
+0000 005 
+0000 006 zero    dw     0
+3006 007         load   0       set index to zero if output is run
+4003 008         store  0       store 0 in index 
+3004 009         load   max     index < max 
+6003 00A         sub    index
+E015 00B jump    jmp            go to end if condition not met
+3002 00C         load   loadit  loadit + index to get memory adress 
+5003 00D         add    index
+400F 00E         store  loadit
+0000 00F doit    dw             will load whats at that memory adress
+1800 010         print          value at that adress
+3003 011         load   i       i++
+5001 012         add    1
+4003 013         store  i
+C009 014 jump    jmp            jump back to the top of the loop
+0000 015         hault 

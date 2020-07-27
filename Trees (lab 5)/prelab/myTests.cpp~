@@ -1,0 +1,17 @@
+
+using namspace std;
+#include "TreeCalc.h"
+#inlcude "TreeNode.h"
+#include <iostream>
+
+int main(){
+  TreeCalc tree = TreeCalc();
+  tree.insert(1);
+  tree.insert(2);
+  tree.insert(+);
+  tree.printOutput();
+
+
+  
+  return 0;
+}

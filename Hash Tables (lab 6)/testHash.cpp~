@@ -1,0 +1,11 @@
+
+#include "hashTable.h"
+using namespace std;
+#include <iostream>
+#include <string>
+int main(){
+  hashTable x =hashTable();
+  x.hashInsert("hey");
+  
+
+}

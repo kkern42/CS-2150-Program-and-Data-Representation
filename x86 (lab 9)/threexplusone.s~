@@ -1,0 +1,38 @@
+; Kevin Kern (kjk9cd)
+; CS 2150 In-Lab 8
+; Spring 2018
+; mergeSort.s	
+
+	global threexplusone
+	section .text
+
+
+; Parameter 1 is a pointer to the int array rdi
+; Parameter 2 is the left index in the array rsi
+; Parameter 3 is the right index in the array rdx
+; Return type is void 
+threexplusone:
+
+	; Implement mergeSort here
+start:
+	cmp [1], rdi
+	jge done
+	push rdi 
+	mov r12, rsi
+	add r12, rdx
+	shr rdi, 1 		;divides by 1
+	push r12
+	push rsi
+	push rdx
+	mov rdx, r12
+	mov rsi, QWORD[rsp + 16]
+	mov rdx, QWORD[rsp]
+	inc rsi
+	mov rcx, QWORD[rsp]
+	mov rdx, QWORD[rsp + 16]
+	mov rsi, QWORD[rsp + 8]
+	pop rdx
+	pop rsi
+	pop r12
+done:
+	ret

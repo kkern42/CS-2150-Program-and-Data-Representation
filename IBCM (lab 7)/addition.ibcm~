@@ -1,0 +1,22 @@
+C007 000       jmp     start  skip variables
+0000 001  i    dw      0      int i
+0000 002  j    dw      0      int j
+0000 003  k    dw      0      int k
+0000 004  sum  dw      0      int sum
+0000 005
+0000 006
+1000 007 start readi          reads in i
+4001 008       store   i      stores i
+1000 009       readj          reads in j
+4002 00A       store   j      stores k
+1000 00B       readk          reads in k
+4003 00C       store   k      stores k
+3004 00D       load    sum    sum += 1
+5001 00E       add     i
+4004 00F       store   sum
+3004 010       load   
+     011
+     012
+     013
+     014
+     015

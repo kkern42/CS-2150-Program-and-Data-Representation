@@ -1,0 +1,44 @@
+C011	000	jump to start of code at index 00f		
+0002	001	variable point, declaring a pointer variable pointing to the first item in the array		
+0004	002	variable a, hard code a[0] = 4		
+0006	003	variable b, hard code a[1] = 6		
+0008	004	variable c, hard code a[2] = 8		
+0002	005	variable d, hard code a[3] = 2		
+0000	006	variable i, set this to 0		
+0000	007	variable zero, set to 0		
+0001	008	variable one, set to 1		
+0004	009	variable length, set to 4		
+0000	00a	variable max, set to 0		
+3000	00b	load comand 		
+0000	00c	variable temp, set to 0		
+0000	00d			
+0000	00e			
+0000	00f			
+0000	010			
+3009	011	start of loop	if (i >= length)	load in length
+6006	012		sub i	
+E029	013		if less than jump to	jmpl
+D029	014		if equal to jump to	jmpe
+C018	015			
+0000	016			
+0000	017			
+300B	018	loading the accumulator which is the load command		
+5001	019	adding the value in which the pointer is pointing		
+401B	01a	storing the new added number into the load command		
+0000	01b	storing new load command value to this memory address		
+400C	01c	storing whats in the accumulator into temp		
+600A	01d	subtract by max		
+E022	01e	If less than 0	turn it into the new max	jmpl
+D022	01f	jump to normal code		
+300C	020	load temp		
+400A	021	store the number in temp to max		
+3006	022	load i		
+5008	023	add 1, to itterate		
+4006	024	store i		
+3001	025	load pointer		
+5008	026	add 1, to itterate pointer		
+4001	027	store pointer		
+C011	028	loop back to the beginning		
+300A	029	load max		
+1800	02A	print max		
+0000	02B	halt		

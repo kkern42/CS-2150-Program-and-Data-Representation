@@ -1,0 +1,85 @@
+/*
+University of Virginia
+CS 2150 In-Lab 8
+Spring 2018 
+Test file for mergeSort
+*/
+#include "myClass.h"
+#include <iostream>
+using namespace std;
+#include <list> 
+
+// void passByReference(int& ref){
+//     ref = 5;
+// }
+
+// void passByValue(int value){
+//     value = 5;
+// }
+
+// void passCharRef(char& ref){
+//     ref = 'a';
+// }
+
+// void passCharVal(char value){
+//     value = 'a';
+// }
+
+// void passFloatRef(float& ref){
+//     ref = 2.2;
+// }
+
+// void passFloatVal(float val){
+//     val = 2.2;
+// }
+
+// void passPointerVal(int* val){
+
+// }
+
+// void passPointerRef(int& ref){
+
+// }
+
+// void passObjectVal(list<int> obj){
+
+// }
+
+// void passObjectRef(list<int>& obj){
+
+// }
+
+// void passArray(int arr[]){
+
+// }
+
+int main(){
+  // int size = 5;
+
+  // //declar ean object 
+  // list<int> obj;
+  // obj.push_back(5);
+  // obj.front();
+
+  // int* point = &size;
+  // int arr[5];
+
+  // passArray(arr);
+
+  // passByValue(size);
+  
+  // passByReference(size);
+
+  // passCharVal('a');
+
+  // char b = 'a';
+
+  // passCharRef(b);
+
+  // passPointerVal(point);
+
+  // passPointerRef(*point);
+
+  return 0;
+
+}

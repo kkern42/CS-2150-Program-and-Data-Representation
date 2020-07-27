@@ -1,0 +1,33 @@
+C00D 000         jmp   start     skip around comments(kevin kern, addition.ibcm, prelab6)
+0008 001 a[0]    dw   
+0001 002 a[1]    dw
+0006 003 a[2]    dw
+0009 004 a[3]    dw
+0001 005 index   dw     1        int index = 1
+0004 006 size    dw     4        int size = 4
+0000 007 max     dw     0        int max = 0
+3000 008 loadit  dw     3000     store load command in loadit
+0001 009 one     dw     1
+0000 00A temp    dw     0
+0000 00B
+0000 00C
+3006 00D loop    load   size     index < size 
+6005 00E         sub    index    size - index
+E01E 00F         jmpl            exit loop if index greater then size 
+3008 010         load   loadit   loadit += index 
+5005 011         add    index
+4016 012         store  loadit   store loadit in doit 
+3005 013         load   index    index =+ 1
+5009 014         add    one
+4005 015         store  index
+0000 016 doit    dw              this is the value at the index
+400A 017         store  temp     store doit in temp 
+300A 018         load   temp     temp >  max 
+6007 019         sub    max
+E00D 01A         jmpl            loop to beginning if temp < max otherwise set max to temp
+300A 01B         load   temp     
+4007 01C         store  temp     store temp in max 
+C00D 01D         jmp             to beginning of loop
+3007 01E exit    load   max      print out max
+1800 01F         print  max
+0000 020         halt

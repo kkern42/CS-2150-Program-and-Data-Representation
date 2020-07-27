@@ -1,0 +1,9 @@
+//User: kjk9cd
+//Date: 9/3/2019
+//File: lifecycle.questions.txt
+//Lab 1: In-Lab
+
+Question:
+
+	I have a question about #include fileName and compiling multiple files together. I had thought C++ when compiling files together this copied and pasted the files below each and ran the program
+	meaning I could declare methods in one and use have the implementation else. However it seems that I can only put the method declartions in .h files, is this true?
